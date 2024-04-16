@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import { Box, Button, InputBase, Typography } from '@mui/material'
 
-export default function Iteration({ id, iteration, edit, remove, isLocked }) {
+export default function Iteration({ id, iteration, edit, remove, isLocked, isLast }) {
   const [name, setName] = useState(iteration)
   const [showEdit, setShowEdit] = useState(false)
   const toggleShowEdit = () => {
@@ -14,7 +14,7 @@ export default function Iteration({ id, iteration, edit, remove, isLocked }) {
       sx={{
         padding: '.5rem 1rem',
         backgroundColor: '#000',
-        borderRadius: 3
+        borderRadius : (id === 1 && isLast) ? '.75rem' : isLast ? '0 0 .75rem .75rem' : id === 1 ? '.75rem .75rem 0 0' : 0
       }}
     >
       <Box
