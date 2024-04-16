@@ -61,6 +61,7 @@ export default function ExperimentModule({ expModule }) {
         borderRadius: 2,
         backgroundColor: '#191919',
       }}
+      data-testid="experiment-module"
     >
       <Box
         sx={{
@@ -165,7 +166,7 @@ export default function ExperimentModule({ expModule }) {
             }}
           >
             <Button
-              variant="text"
+              // variant="text"
               color="inherit"
               onClick={handleShowAddIteration}
               disabled={isLocked}
@@ -175,7 +176,7 @@ export default function ExperimentModule({ expModule }) {
                 },
               }}
             > 
-              <AddIcon /> 
+              <AddIcon />
               Add itertation
             </Button>
             <Button 
