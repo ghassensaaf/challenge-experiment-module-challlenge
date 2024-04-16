@@ -152,6 +152,10 @@ export default function ExperimentModule({ expModule }) {
                 </Button>
                 <Button 
                   variant="text"
+                  onClick={()=> {
+                    setShowAddIteration(false)
+                    setName('')
+                  }}
                 >
                   <Typography color="#BFBFBF" fontSize={14}>Cancel</Typography>
                 </Button>
