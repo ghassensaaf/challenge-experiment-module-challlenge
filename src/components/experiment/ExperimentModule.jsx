@@ -2,9 +2,7 @@ import { useState } from "react";
 
 import { Box, Button, Typography } from "@mui/material";
 
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import LockOpenOutlinedIcon from '@mui/icons-material/LockOpenOutlined';
-import AddIcon from '@mui/icons-material/Add';
+
 
 import Iteration from "./iteration/Iteration";
 import AddIteration from "./iteration/AddIteration";
@@ -74,8 +72,8 @@ export default function ExperimentModule({ expModule }) {
       >
         <Typography component="h3" variant="h5" color={(isLocked !== null && !isLocked && iterations.length > 0 ) ? '#FFF' : '#BFBFBF'}>{ expModule.name }</Typography>
         <Typography component="h3" variant="h5" color={(isLocked !== null && !isLocked && iterations.length > 0 ) ? '#FFF' : '#BFBFBF'}>
-          {isLocked !== null && isLocked && <LockOutlinedIcon /> }
-          {isLocked !== null && !isLocked && <LockOpenOutlinedIcon /> }
+          {/* {isLocked !== null && isLocked && <LockOutlinedIcon /> }
+          {isLocked !== null && !isLocked && <LockOpenOutlinedIcon /> } */}
         </Typography>
       </Box>
 
@@ -180,7 +178,7 @@ export default function ExperimentModule({ expModule }) {
                 },
               }}
             > 
-              <AddIcon />
+              {/* <AddIcon /> */}
               Add iteration
             </Button>
             <Button 
