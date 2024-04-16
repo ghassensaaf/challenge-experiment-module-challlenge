@@ -2,7 +2,9 @@ import { useState } from "react";
 
 import { Box, Button, Typography } from "@mui/material";
 
-
+import { FaLockOpen } from "react-icons/fa";
+import { FaLock } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
 
 import Iteration from "./iteration/Iteration";
 import AddIteration from "./iteration/AddIteration";
@@ -71,9 +73,9 @@ export default function ExperimentModule({ expModule }) {
         onClick={toggleShowIterations}
       >
         <Typography component="h3" variant="h5" color={(isLocked !== null && !isLocked && iterations.length > 0 ) ? '#FFF' : '#BFBFBF'}>{ expModule.name }</Typography>
-        <Typography component="h3" variant="h5" color={(isLocked !== null && !isLocked && iterations.length > 0 ) ? '#FFF' : '#BFBFBF'}>
-          {/* {isLocked !== null && isLocked && <LockOutlinedIcon /> }
-          {isLocked !== null && !isLocked && <LockOpenOutlinedIcon /> } */}
+        <Typography component="h3" variant="h5" color="#9F9F9F">
+          {isLocked !== null && isLocked && <FaLock /> }
+          {isLocked !== null && !isLocked && <FaLockOpen /> }
         </Typography>
       </Box>
 
@@ -178,7 +180,7 @@ export default function ExperimentModule({ expModule }) {
                 },
               }}
             > 
-              {/* <AddIcon /> */}
+              <FaPlus />
               Add iteration
             </Button>
             <Button 
