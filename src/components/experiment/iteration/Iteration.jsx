@@ -36,7 +36,12 @@ export default function Iteration({ id, iteration, edit, remove, isLocked }) {
             { `EM-${id}` }
           </Typography>
           
-          { !showEdit && (<Typography component="p" variant="body2" color="#FFF">{ name }</Typography>)}
+          { !showEdit && (<Typography component="p" variant="body2" color="#FFF" sx={{
+            display: '-webkit-box',
+            WebkitBoxOrient: 'vertical',
+            overflow: 'hidden',
+            WebkitLineClamp: 1,
+          }}>{ name }</Typography>)}
           { showEdit && (
             <InputBase
               sx={{ 
