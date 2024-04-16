@@ -17,7 +17,7 @@ export default function AddIteration({ id, handleAddIteration, name, setName }) 
           display: 'flex',
           flexDirection: 'row',
           alignItems:'center',
-          borderRadius: 3,
+          borderRadius : id === 1 ? '0.75rem' : '0 0 .75rem .75rem',
           gap: 3
         }}
       >

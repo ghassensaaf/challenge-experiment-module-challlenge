@@ -96,7 +96,15 @@ export default function ExperimentModule({ expModule }) {
             >
               {
                 iterations && iterations.length > 0 && iterations.map((iteration, index) => (
-                  <Iteration key={iteration} id={index + 1} iteration={iteration} edit={handleEditIteration} remove={handleDeleteIteration} isLocked={isLocked} />
+                  <Iteration 
+                    key={iteration} 
+                    id={index + 1} 
+                    iteration={iteration} 
+                    edit={handleEditIteration} 
+                    remove={handleDeleteIteration} 
+                    isLocked={isLocked} 
+                    isLast={index === iterations.length - 1 && !showAddIteration}
+                  />
                 ))
               }
               {
