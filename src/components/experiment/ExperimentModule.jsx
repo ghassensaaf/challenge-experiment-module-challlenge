@@ -181,7 +181,7 @@ export default function ExperimentModule({ expModule }) {
               }}
             > 
               <AddIcon />
-              Add itertation
+              Add iteration
             </Button>
             <Button 
               variant="text"
