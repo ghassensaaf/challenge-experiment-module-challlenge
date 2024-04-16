@@ -194,7 +194,10 @@ export default function ExperimentModule({ expModule }) {
             <Button 
               variant="text"
               color="inherit"
-              onClick={() => setIterations([])}
+              onClick={() => {
+                setIterations([])
+                setIsLocked(null)
+              }}
               disabled={isLocked}
               sx={{
                 '&:disabled': {

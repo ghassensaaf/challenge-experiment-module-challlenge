@@ -14,7 +14,14 @@ export default function Iteration({ id, iteration, edit, remove, isLocked, isLas
       sx={{
         padding: '.5rem 1rem',
         backgroundColor: '#000',
-        borderRadius : (id === 1 && isLast) ? '.75rem' : isLast ? '0 0 .75rem .75rem' : id === 1 ? '.75rem .75rem 0 0' : 0
+        borderRadius : 
+          (id === 1 && isLast) 
+            ? '.75rem' 
+            : isLast 
+            ? '0 0 .75rem .75rem' 
+            : id === 1 
+            ? '.75rem .75rem 0 0' 
+            : 0
       }}
     >
       <Box
