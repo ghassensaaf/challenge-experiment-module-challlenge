@@ -58,7 +58,10 @@ export default function Iteration({ id, iteration, edit, remove, isLocked, isLas
               }}
               placeholder="Editing iteration..."
               value={name}
-              onChange={(e)=> setName(e.target.value)}
+              onChange={(e)=> {
+                if(e.target.value.length<=35)
+                  setName(e.target.value)
+              }}
               autoFocus
             />
           )}
