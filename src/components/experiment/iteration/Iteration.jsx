@@ -7,7 +7,7 @@ export default function Iteration({ id, iteration, edit, remove, isLocked, isLas
   const [showEdit, setShowEdit] = useState(false)
   const toggleShowEdit = () => {
     if (!isLocked)
-      setShowEdit(prev => !prev)
+      setShowEdit(true)
   }
   return (
     <Box
@@ -86,53 +86,36 @@ export default function Iteration({ id, iteration, edit, remove, isLocked, isLas
         <>
           <Box
             sx={{
-              marginLeft: '3.9rem',
-              marginTop: '.25rem',
               display: 'flex',
-              flexDirection: 'column',
+              flexDirection: 'row',
               gap: 1,
-              justifyItems: 'flex-start'
-              // overflowWrap: 'anywhere'
+              marginLeft: '4rem',
+              flexWrap: 'wrap' 
             }}
           >
-            <Box
+            <Typography
+              fontSize={12}
               sx={{
-                display: 'flex',
-                flexDirection: 'row',
-                gap: 1
-              }}
-            >
-              <Typography
-                fontSize={12}
-                sx={{
-                  padding: '.5rem',
-                  border: name.length < 10 ? '1px solid #04A53C' : '1px solid #FFF',
-                  borderRadius: 2,
-                  color:  (name.length < 10) ? '#04A53C' : '#FFF',
+                padding: '.5rem',
+                border: name.length < 10 ? '1px solid #04A53C' : '1px solid #FFF',
+                borderRadius: 2,
+                color:  (name.length < 10) ? '#04A53C' : '#FFF',
 
-                }}
-              >
-                SHORT
-              </Typography>
-              <Typography
-                fontSize={12}
-                sx={{
-                  padding: '.5rem',
-                  border: (name.length >= 10 && name.length < 20) ? '1px solid #04A53C' : '1px solid #FFF',
-                  borderRadius: 2,
-                  color:  (name.length >= 10 && name.length < 20) ? '#04A53C' : '#FFF',
-                }}
-              >
-                MEDIUM LENGTH
-              </Typography>
-            </Box> 
-            <Box
-              sx={{
-                display: 'flex',
-                flexDirection: 'row',
-                gap: 1
               }}
             >
+              SHORT
+            </Typography>
+            <Typography
+              fontSize={12}
+              sx={{
+                padding: '.5rem',
+                border: (name.length >= 10 && name.length < 20) ? '1px solid #04A53C' : '1px solid #FFF',
+                borderRadius: 2,
+                color:  (name.length >= 10 && name.length < 20) ? '#04A53C' : '#FFF',
+              }}
+            >
+              MEDIUM LENGTH
+            </Typography>
               <Typography
                 fontSize={12}
                 sx={{
@@ -144,8 +127,7 @@ export default function Iteration({ id, iteration, edit, remove, isLocked, isLas
               >
                 {'VERY VERY VERY LONG (UP TO 35 CHAR)'}
               </Typography>
-            </Box>
-          </Box>
+          </Box> 
 
           <hr 
             style={{
