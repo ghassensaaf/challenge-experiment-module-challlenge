@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { Box, Button, InputBase, Typography } from '@mui/material'
 
@@ -9,6 +9,11 @@ export default function Iteration({ id, iteration, edit, remove, isLocked, isLas
     if (!isLocked)
       setShowEdit(true)
   }
+
+  useEffect(() => {
+    if(isLocked)
+      setShowEdit(false)
+  }, [isLocked])
   return (
     <Box
       sx={{
